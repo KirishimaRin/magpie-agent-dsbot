@@ -1,7 +1,7 @@
 {
   "name": "magpie-agent-deepseek_bot",
-  "version": "0.3.0-preview.2",
-  "description": "Third-party Magpie bridge for DeepSeek Bot by KirishimaRin. DeepSeek Bot icon: Fei2411 and contributors, Apache-2.0.",
+  "version": "0.3.0-preview.3",
+  "description": "Third-party Magpie bridge for DS-Bot by KirishimaRin. DS-Bot icon: Fei2411 and contributors, Apache-2.0.",
   "author": "KirishimaRin",
   "type": "module",
   "license": "MIT",
@@ -11,7 +11,8 @@
   "keywords": [
     "magpie-plugin",
     "magpie-agent",
-    "deepseek-bot"
+    "ds-bot",
+    "dsbot"
   ],
   "files": [
     "agent.js",

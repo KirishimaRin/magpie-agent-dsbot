@@ -2,7 +2,7 @@
 
 ## 数据位置
 
-按以下顺序查找 DeepSeek Bot 数据：
+按以下顺序查找 DS-Bot 数据：
 
 1. 插件选项 `dataDir`。
 2. `DS_BOT_HOME` 环境变量。
@@ -10,6 +10,8 @@
 4. 默认 `~/.ds-bot`。
 
 Windows 的位置记录为 `%APPDATA%\DeepSeek Bot\locations.json`。可用 `shellData` 选项或 `DS_BOT_SHELL_DATA` 指定自定义应用设置目录。
+
+DS-Bot 当前仍沿用这个应用设置目录名称；插件从其中读取用户实际选择的数据目录。
 
 插件只管理这份数据的 `profiles/ds-bot/cordis.patch.yml`；家目录 `cordis.patch.yml` 已有 `llm-pi-ai.config` 覆盖时也合并同一组路由。网关凭据保存到该数据目录的 `.credentials.yaml`，引用名为 `MAGPIE_DSBOT_GATEWAY_KEY`。
 
@@ -25,7 +27,7 @@ npm run explain
 npm run sync
 ```
 
-正常断开：在 Magpie Agents 页关闭 **DeepSeek Bot**。同步器会清理专用供应商及其凭据。请在移除插件前先断开；若已停用同步器，可运行：
+正常断开：在 Magpie Agents 页关闭 **DS-Bot**。同步器会清理专用供应商及其凭据。请在移除插件前先断开；若已停用同步器，可运行：
 
 ```powershell
 npm run restore
@@ -48,7 +50,7 @@ Magpie 当前 Agent 插件接口未传入原生协议。插件独立构建模型
 
 命令行工具会读取已安装插件的相同选项。便携版也可使用 `node cli.js status --options C:\path\options.json`；`sync`、`explain`、`restore`、`prune` 同样接受 `--options`。诊断为只读，`sync` 更新配置，`restore` 断开清理，`prune` 只清理升级兼容入口。
 
-相应生成 **Magpie · DS Bot**（Chat）、**Magpie · DS Bot · Responses**、**Magpie · DS Bot · Anthropic**。普通模型只进入匹配的协议组；无模型且无升级兼容入口的组自动移除。
+相应生成 **Magpie · DS-Bot**（Chat）、**Magpie · DS-Bot · Responses**、**Magpie · DS-Bot · Anthropic**。普通模型只进入匹配的协议组；无模型且无升级兼容入口的组自动移除。
 
 从旧版升级或模型换协议时，旧供应商下保留同 ID 的兼容入口，名称标注“旧接口，建议切换”。在 Bot 设置中切换到新组后，可运行 `npm run prune` 清除旧入口。此操作会使仍选择旧入口的 Bot 需要重新选模型；先根据 `npm run check` 列出的 `compatibilityAliases` 检查。清理后自动同步不会重新创建这些旧入口。插件不读取或改写会话日志来迁移选择。
 

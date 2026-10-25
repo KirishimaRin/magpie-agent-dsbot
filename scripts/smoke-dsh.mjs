@@ -1,4 +1,4 @@
-// Exercise the installed DS Bot's real DSH adapter against a local mock gateway.
+// Exercise the installed DS-Bot's real DSH adapter against a local mock gateway.
 import http from 'node:http';
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
@@ -7,7 +7,7 @@ import { pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { routesFor } from '../lib/catalog.js';
 const executable = process.env.DS_BOT_EXE;
-if (!executable) throw new Error('Set DS_BOT_EXE to the installed DeepSeek Bot executable.');
+if (!executable) throw new Error('Set DS_BOT_EXE to the installed DS-Bot executable.');
 const modulePath = process.env.DS_BOT_ADAPTER || path.join(path.dirname(executable), 'resources/app.asar/node_modules/@deepseek-ai/dsh-llm-pi-ai/lib/index.js');
 let request;
 const responses = process.argv.includes('--responses');
@@ -81,5 +81,5 @@ try {
   const effort = anthropic ? request.body.output_config?.effort : responses ? request.body.reasoning?.effort : request.body.reasoning_effort;
   assert.equal(effort, 'high');
   assert.match(JSON.stringify(result.chunks), /bridge-ok/);
-  console.log(JSON.stringify({ status: 'passed', adapter: 'DS Bot bundled DSH 0.2.1-rc.2', model: result.info, requestPath: request.path, reasoningEffort: effort, streamedReply: 'bridge-ok' }, null, 2));
+  console.log(JSON.stringify({ status: 'passed', adapter: 'DS-Bot bundled DSH 0.2.1-rc.2', model: result.info, requestPath: request.path, reasoningEffort: effort, streamedReply: 'bridge-ok' }, null, 2));
 } finally { server.closeAllConnections(); server.close(); }

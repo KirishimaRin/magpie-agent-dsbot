@@ -14,7 +14,7 @@
 - 执行 `npm pack --dry-run`，核对入口、图标、文档及第三方许可证均包含在包内。
 - 执行 `npm run check:package`，自动核对包名、图标、文档链接和许可证分发内容；GitHub CI 使用 Windows 与 Node.js 22 运行测试及该项检查。
 - 执行 `node scripts/smoke-magpie.mjs`，在隔离目录验证安装、接入、同步、断开和移除。
-- 按开发文档运行 DeepSeek Bot 内置适配器的三种协议验收。
+- 按开发文档运行 DS-Bot 内置适配器的三种协议验收。
 - 保留 `magpie.agent`、`magpie.icon`，核查后台启动方式；实际分类与图标显示在目标 Magpie 版本中验证。
 - 核对图标源文件和两处内嵌数据一致，源码与安装包均保留第三方声明。
 - 复核提交文件中的个人路径、密钥和临时资料。

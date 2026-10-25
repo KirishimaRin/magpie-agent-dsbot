@@ -5,14 +5,14 @@
 ```powershell
 npm test
 node scripts/smoke-magpie.mjs
-$env:DS_BOT_EXE = 'C:\Apps\DeepSeek Bot\DeepSeek Bot.exe'
+$env:DS_BOT_EXE = 'C:\Apps\DS-Bot\DeepSeek Bot.exe'
 node scripts/smoke-dsh.mjs
 node scripts/smoke-dsh.mjs --responses
 node scripts/smoke-dsh.mjs --anthropic
 node scripts/compare-dsh.mjs
 ```
 
-`smoke-magpie` 用隔离目录验证真实 Magpie 的安装、接入、同步、断开和移除，目标目录中没有 DSH 安装。`smoke-dsh` 用已安装的 DeepSeek Bot 内置适配器连接本地模拟网关，验证三种协议的模型能力、思考参数和流式响应；通过 `DS_BOT_EXE`、`DS_BOT_ADAPTER` 指定安装位置。
+`smoke-magpie` 用隔离目录验证真实 Magpie 的安装、接入、同步、断开和移除，目标目录中没有 DSH 安装。`smoke-dsh` 用已安装的 DS-Bot 内置适配器连接本地模拟网关，验证三种协议的模型能力、思考参数和流式响应；通过 `DS_BOT_EXE`、`DS_BOT_ADAPTER` 指定安装位置。
 
 `compare-dsh` 仅为开发验收工具：只读本机 Magpie 已生成的 DSH 分组，与独立计算结果对照。正式插件运行不导入该脚本。
 
@@ -28,9 +28,9 @@ node scripts/compare-dsh.mjs
 
 实现依据：
 
-- [DeepSeek Bot v0.2.0](https://github.com/Fei2411/DeepSeek-Bot/releases/tag/v0.2.0)
-- [数据位置与首次启动](https://github.com/Fei2411/DeepSeek-Bot/blob/ae63b45c0d0e75b5f59fc3042b5043761ee41391/app/src/first-run.mjs)
-- [ds-bot profile](https://github.com/Fei2411/DeepSeek-Bot/blob/ae63b45c0d0e75b5f59fc3042b5043761ee41391/app/src/profile.mjs)
+- [DS-Bot v0.2.0](https://github.com/Fei2411/DS-Bot/releases/tag/v0.2.0)
+- [数据位置与首次启动](https://github.com/Fei2411/DS-Bot/blob/ae63b45c0d0e75b5f59fc3042b5043761ee41391/app/src/first-run.mjs)
+- [ds-bot profile](https://github.com/Fei2411/DS-Bot/blob/ae63b45c0d0e75b5f59fc3042b5043761ee41391/app/src/profile.mjs)
 - [Magpie Agent 插件协议](https://github.com/yetone/magpie/blob/main/internal/agentplug/agentplug.go)
 
 ## 后台服务入口

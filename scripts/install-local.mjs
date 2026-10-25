@@ -12,9 +12,9 @@ const executable = process.env.MAGPIE_EXE || path.join(os.homedir(), 'Desktop', 
 if (!fs.existsSync(executable)) throw new Error('Set MAGPIE_EXE to the Magpie executable.');
 const run = args => execFileSync(executable, args, { windowsHide: true, timeout: 120000, encoding: 'utf8' });
 run(['plugin', 'add', root]);
-console.log('DeepSeek Bot plugin added.');
+console.log('DS-Bot plugin added.');
 run(['deepseekbot', 'provider', 'magpie']);
-console.log('DeepSeek Bot connected to Magpie.');
+console.log('DS-Bot connected to Magpie.');
 const options = cliOptions([]), p = paths(options);
 await refreshMetadata(p);
 console.log(JSON.stringify(sync(p, options), null, 2));
