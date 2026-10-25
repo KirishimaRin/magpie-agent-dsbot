@@ -4,7 +4,8 @@
 
 - 2026-10-26 核对上游已改名为 DS-Bot，仓库为 `Fei2411/DS-Bot`。产品说明、Agent 名称、供应商显示名和链接统一使用 DS-Bot。
 - 上游 `app/package.json` 的 `productName` 目前仍为 `DeepSeek Bot`，应用设置目录及可执行文件名称仍沿用该名称。`lib/paths.js` 中对应路径用于实际读取 `locations.json`，不要直接批量替换。
-- 保留插件包名和仓库名 `magpie-agent-deepseek_bot`、Agent ID `deepseekbot`、桥接目录 `magpie-deepseekbot`、供应商 ID `magpie-dsbot*` 和凭据引用 `MAGPIE_DSBOT_GATEWAY_KEY`，避免改名导致重复安装、原模型选择失效或遗留凭据。
+- 2026-10-26 用户要求包名与仓库名一并改为 `magpie-agent-dsbot`。旧名 `magpie-agent-deepseek_bot` / `magpie-agent-deepseekbot` 仅在安装兼容和历史工作区说明中保留。识别插件选项时同时支持新旧名称；迁移安装记录时保留选项并清理旧记录。
+- 保留 Agent ID `deepseekbot`、桥接目录 `magpie-deepseekbot`、供应商 ID `magpie-dsbot*` 和凭据引用 `MAGPIE_DSBOT_GATEWAY_KEY`，保证原模型选择与接入数据继续有效。
 - 产品改名不等于已完成新版本兼容验收。README 的已测试版本以真实验证结果为准；原图标来源仍固定到已记录的 v0.2.0 提交。
 - 上游版权和 NOTICE 原文按来源保留；说明文字采用当前产品名称。
 

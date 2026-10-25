@@ -1,6 +1,6 @@
 # GitHub 发布流程
 
-包名与仓库名均为 `magpie-agent-deepseek_bot`，GitHub 仓库为 `KirishimaRin/magpie-agent-deepseek_bot`。
+包名与仓库名均为 `magpie-agent-dsbot`，GitHub 仓库为 `KirishimaRin/magpie-agent-dsbot`。
 
 ## 仓库内容
 

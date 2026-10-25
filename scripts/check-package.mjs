@@ -6,7 +6,7 @@ import { agent } from '../agent.js';
 
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
 const lock = JSON.parse(fs.readFileSync('package-lock.json', 'utf8'));
-assert.equal(pkg.name, 'magpie-agent-deepseek_bot');
+assert.equal(pkg.name, 'magpie-agent-dsbot');
 assert.equal(lock.name, pkg.name);
 assert.equal(lock.packages[''].name, pkg.name);
 assert.equal(lock.version, pkg.version);

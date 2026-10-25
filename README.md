@@ -24,18 +24,18 @@
 
 ## 安装
 
-在 **插件 → 发现 → 非官方插件 · GitHub → Agent** 中搜索 `deepseek`，选择作者 KirishimaRin 的 `magpie-agent-deepseek_bot`。列表尚未刷新时，也可使用下面的地址安装。
+在 **插件 → 发现 → 非官方插件 · GitHub → Agent** 中搜索 `dsbot`，选择作者 KirishimaRin 的 `magpie-agent-dsbot`。列表尚未刷新时，也可使用下面的地址安装。
 
 在 **Magpie → 插件 → 添加插件** 中输入：
 
 ```text
-github:KirishimaRin/magpie-agent-deepseek_bot#main
+github:KirishimaRin/magpie-agent-dsbot#main
 ```
 
 也可以通过命令行安装：
 
 ```powershell
-magpie plugin add github:KirishimaRin/magpie-agent-deepseek_bot#main
+magpie plugin add github:KirishimaRin/magpie-agent-dsbot#main
 ```
 
 ## 开始使用
@@ -110,7 +110,7 @@ magpie plugin update
 
 供应商 API Key 由 Magpie 管理。插件使用 Magpie 网关转发模型请求，读取模型协议元数据，并在本机保存 DS-Bot 专用接入凭据。元数据查询仅向配置的网关获取模型列表。
 
-遇到问题请在 [Issues](https://github.com/KirishimaRin/magpie-agent-deepseek_bot/issues) 提供版本、复现步骤及检查后的 `npm run check` 或 `npm run explain` 输出。配置文件、桥接文件、凭据和备份请留在本机。
+遇到问题请在 [Issues](https://github.com/KirishimaRin/magpie-agent-dsbot/issues) 提供版本、复现步骤及检查后的 `npm run check` 或 `npm run explain` 输出。配置文件、桥接文件、凭据和备份请留在本机。
 
 ## 开发与许可
 

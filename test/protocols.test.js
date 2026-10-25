@@ -126,7 +126,7 @@ test('adaptive Claude routing adds protocol-specific thinking compatibility', ()
 test('CLI honors installed options and a portable options file', t => {
   const { p, write } = setup(t), home = path.dirname(p.magpieConfig);
   const opts = { dataDir: '/fixture-data', modelOverrides: { 'p/m': { api: 'openai-responses' } } };
-  for (const spec of ['github:owner/magpie-agent-deepseek_bot', 'magpie-agent-deepseek_bot@0.3.0-preview.2', 'github:owner/magpie-agent-deepseekbot']) {
+  for (const spec of ['github:owner/magpie-agent-dsbot#main', 'magpie-agent-dsbot@0.3.0-preview.4', 'C:\\Plugins\\magpie-agent-dsbot', 'github:owner/magpie-agent-deepseek_bot', 'magpie-agent-deepseek_bot@0.3.0-preview.2', 'github:owner/magpie-agent-deepseekbot']) {
     write(path.join(home, '.config', 'magpie', 'plugins.json'), { plugins: [{ spec, options: opts }] });
     assert.deepEqual(cliOptions([], {}, home), opts);
   }

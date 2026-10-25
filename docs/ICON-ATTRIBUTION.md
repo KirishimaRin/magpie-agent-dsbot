@@ -35,6 +35,6 @@ Copyright 2026 Fei2411 and the DS Bot contributors.
 
 ## 第三方身份与名称标识
 
-`magpie-agent-deepseek_bot` 是 KirishimaRin 独立开发的第三方适配插件，与 DS-Bot 作者及 DeepSeek 官方无隶属或背书关系。DS-Bot 名称及图标仅用于说明兼容和接入对象。
+`magpie-agent-dsbot` 是 KirishimaRin 独立开发的第三方适配插件，与 DS-Bot 作者及 DeepSeek 官方无隶属或背书关系。DS-Bot 名称及图标仅用于说明兼容和接入对象。
 
 名称和图标的使用遵循上游 Apache-2.0 第 6 条的商标条款；本插件依据该许可证作兼容对象的来源说明。
